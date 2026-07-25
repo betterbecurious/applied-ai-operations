@@ -72,11 +72,24 @@ Thornbury Housing Trust built a system that reads inbound maintenance requests a
 
 **What they handed over:**
 
+| Item | |
+|---|---|
+| **Runbook** | 2 pages. Includes one *bad* output: a damp complaint miscategorised as cosmetic because the tenant described it politely. |
+| **Eval sheet** | 20 real anonymised requests, dated 4 March. 17/20, 19/20, 20/20. The three failures listed by name. |
+| **Owner** | Priya, maintenance coordinator. Asked first, agreed, sat in on the last two eval runs. |
+| **Escalation** | *Broken* → Dan in IT. *Wrong* → Priya stops using it, triages by hand, re-runs the sheet. |
+| **Limitations** | Four written down. The load-bearing one: no access to tenancy history, so **a repeat complaint looks identical to a first one.** |
+
+<details>
+<summary><strong>Expand: each item in full</strong></summary>
+
 - **Runbook** — 2 pages. What it does, how to run it, one good output, and one genuinely bad output: a damp complaint miscategorised as cosmetic because the tenant had described it politely.
 - **Eval sheet** — 20 real anonymised requests, scored 1–3 on category accuracy, urgency accuracy, and clause correctness. Dated 4 March. Scored 17/20, 19/20, 20/20. **The three category failures were listed by name**, all of them understated urgency, all of them politely-worded.
 - **Owner** — Priya, maintenance coordinator. Asked first, agreed, and sat in on the last two eval runs so the sheet wasn't a stranger.
 - **Escalation** — *Broken:* Dan in IT. *Wrong:* Priya flags it, stops using it for that request type, triages by hand, and re-runs the eval sheet. If two consecutive runs drop below 16/20 on any column, the system comes out of service until reviewed.
 - **Known limitations** — Never tested on requests over 400 words. Never tested on requests in any language but English. Systematically understates urgency when the tenant is polite. Has no access to the tenancy history system, so it cannot see repeat complaints — **a repeated request looks identical to a first one.**
+
+</details>
 
 That last limitation was the most valuable line in the document. It wasn't a bug and nothing could be done about it in two weeks. But because it was written down, Priya knew to check repeat-complaint history manually — and six weeks later, when a tenant's third damp report came in politely worded, it got escalated by a human who knew the system's blind spot.
 

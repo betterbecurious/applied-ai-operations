@@ -61,9 +61,18 @@ Skip the Skill and just ask when:
 
 *(Invented. Meridian Freight is not a real company.)*
 
-Meridian Freight's operations team answers roughly forty delivery-delay complaints a week. Every reply needs the same things: an acknowledgement, the actual revised ETA from the tracking system, a specific reason, and a compensation offer that follows a fixed policy band. The replies are inconsistent, and the inconsistent ones generate follow-up complaints.
+Meridian Freight's operations team answers roughly forty delivery-delay complaints a week. Every reply needs the same four things — an acknowledgement, the revised ETA from the tracking system, a specific cause, and a compensation offer from a fixed policy band. The replies are inconsistent, and the inconsistent ones generate follow-up complaints.
 
-**The Skill — `delay-complaint-reply`**
+**The Skill — `delay-complaint-reply`:**
+
+- **Fires when** — drafting a customer reply about a delayed or missed delivery.
+- **Needs** — consignment number, customer's message, tracking status, delay cause code. **Cause code missing → stop and ask.** Never infer it from the tracking status.
+- **Does** — acknowledge the specific delay → revised ETA as a date, not a duration → cause in one plain sentence → compensation from the band table → who owns what happens next.
+- **Returns** — subject line, then a body under 150 words. Prose, not bullets; this is a customer email.
+- **Refuses** — legal action, injury, or perishable/pharmaceutical goods. Escalates to the duty manager.
+
+<details>
+<summary><strong>Expand: the Skill in full</strong></summary>
 
 > **Description:** When drafting a customer reply about a delayed or missed delivery for Meridian Freight operations.
 >
@@ -84,6 +93,8 @@ Meridian Freight's operations team answers roughly forty delivery-delay complain
 > **Refuse if:** the customer has mentioned legal action, injury, or perishable/pharmaceutical goods. Escalate to the duty manager instead.
 >
 > **Example:** *[full input → full output pair]*
+
+</details>
 
 What changed: replies went out in the same shape every time, the compensation policy stopped being applied from memory, and the escalation cases got routed instead of answered. The team still reads every reply before it sends — that's the [checkpoint](../practices/human-checkpoints.md), and it stays.
 

@@ -84,6 +84,16 @@ Every page follows the same shape:
 
 That last section is mandatory and is where most of the credibility lives. Tag each page with the verb it serves. Five-minute read maximum.
 
+### Format addenda (agreed 2026-07-25, after the §13 step 2 review)
+
+Both apply to every page.
+
+**A. Worked examples are compressed by default, with the full transcript in a `<details>` block.**
+The constraint that makes this compatible with §8: **the visible compressed version must be self-sufficient.** A reader who never expands still gets the whole lesson. The expand holds verbose detail, never the point. This is not an accordion hiding content from a learner — it is the reference detail §3 says to link out for, kept in place. On the website, the same rule applies: compressed visible, full transcript expandable, nothing load-bearing behind a click.
+
+**B. Skill-shaped pages carry a "refusal conditions" element.**
+Not in the original §6 spec; added because it is where the credibility sits. Most Skills handle the ninety-percent case well and handle the dangerous ten-percent case just as confidently and wrongly. Where a page describes something that produces output, it says where that thing should stop and ask instead.
+
 ## The Tools (5) — what you use
 
 | Tool | Must cover |

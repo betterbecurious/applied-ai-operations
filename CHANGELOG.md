@@ -18,6 +18,10 @@ What changed, when, and why. Review entries are logged even when nothing changed
 - **Domain:** GitHub Pages default. Revisit if the reference gets linked widely enough that a stable custom URL earns its DNS.
 - **Brand and design tokens:** unresolved. Site remains at neutral default per §12.1.
 
+**Format rules agreed** (after the §13 step 2 review, recorded as `HANDOVER.md` §6 addenda)
+- **Worked examples compress by default,** full transcript in a `<details>` block. Guarded by the rule that the visible version must be self-sufficient — this keeps it on the right side of §8's ban on accordions that hide content from a learner.
+- **Refusal conditions are a required element** on pages describing something that produces output. Not in the original §6 spec. Added because most systems handle the dangerous ten-percent case as confidently as the easy ninety.
+
 **Outstanding**
 - Nine remaining pages, pending format sign-off on the two exemplars (`HANDOVER.md` §13, step 2).
 - `templates/` — three files.
