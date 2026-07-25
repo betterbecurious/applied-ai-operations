@@ -26,7 +26,7 @@ LAST_REVIEWED = "2026-07-25"
 # Set once the repo has a home. GitHub-relative links in README.md (such as
 # ../../issues) have no meaning on the published site, so they are rewritten
 # against this.
-REPO_URL = "https://github.com/USERNAME/applied-ai-operations"
+REPO_URL = "https://github.com/betterbecurious/applied-ai-operations"
 
 TOOLS = ["project", "skill", "connectors", "claude-code", "eval-sheet"]
 PRACTICES = [
