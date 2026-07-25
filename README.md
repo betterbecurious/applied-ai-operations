@@ -78,6 +78,18 @@ It scores two axes separately and **never sums them**. Axis A asks whether the p
 | [`templates/process-brief.md`](templates/process-brief.md) | The Process Filter as a fillable page, for when you're away from a browser. |
 | [`templates/handover-package.md`](templates/handover-package.md) | The document you hand over. Fill every section or don't hand over. |
 
+## The website
+
+[`site/index.html`](site/index.html) is the whole site: one file, no build step, no npm, no framework. Open it by double-clicking it. Deploy it to GitHub Pages unchanged. Fork it without installing anything.
+
+**`docs/` is canonical.** The site is generated from it — it is never a second copy to keep in step by hand. After editing any page, regenerate:
+
+```bash
+python3 build-site.py
+```
+
+That script is a maintenance tool for whoever edits this repo, not a build step for whoever reads it. `site/index.html` is committed. Where the site and the docs ever disagree, the docs are right.
+
 ---
 
 ## Deliberately out of scope
@@ -108,7 +120,8 @@ The review routine, in order:
 2. **Re-read the five tool pages against current product behaviour.** These carry the most product-specific surface and go stale first.
 3. **Check for hardcoded plan or capability claims** that have crept in. Replace with a link.
 4. **Re-read the exclusions.** An exclusion that is no longer defensible is a page that needs writing.
-5. **Update the `Last reviewed` date here and in the site footer, and add a `CHANGELOG.md` entry** — even when nothing changed. "Reviewed, no changes" is information.
+5. **Update the `Last reviewed` date** here and in `LAST_REVIEWED` in `build-site.py`, then run `python3 build-site.py` so the site footer matches.
+6. **Add a `CHANGELOG.md` entry** — even when nothing changed. "Reviewed, no changes" is information.
 
 ## Contributing
 

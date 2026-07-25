@@ -22,7 +22,20 @@ What changed, when, and why. Review entries are logged even when nothing changed
 - **Worked examples compress by default,** full transcript in a `<details>` block. Guarded by the rule that the visible version must be self-sufficient — this keeps it on the right side of §8's ban on accordions that hide content from a learner.
 - **Refusal conditions are a required element** on pages describing something that produces output. Not in the original §6 spec. Added because most systems handle the dangerous ten-percent case as confidently as the easy ninety.
 
+**Added — remaining content**
+- Nine remaining pages: `project`, `connectors`, `claude-code`, `eval-sheet`, `context-engineering`, `the-loop`, `human-checkpoints`, `failure-modes`, `data-hygiene`.
+- `templates/eval-sheet.csv`, `templates/process-brief.md`, `templates/handover-package.md`.
+- `site/index.html` — single file, no build step, scroll-spy sidebar, verb tags, Process Filter placed above the reading material.
+- `build-site.py` — generates the site from `README.md` and `docs/`.
+
+**Deviation from `HANDOVER.md` §5**
+- `build-site.py` sits at the repo root, which the §5 structure doesn't list. Justified by §4: the site "must be generated from or deliberately synced with the docs," and two hand-maintained copies diverge. The reader still gets no build step — `site/index.html` is committed and opens by double-clicking. `docs/` is stated as canonical in the README and in the site footer.
+
+**Verified at time of writing**
+- All seven outbound links return 200.
+- All in-page anchors and relative links in `site/index.html` resolve.
+- All nine Process Filter band combinations return distinct, correct verdicts, with the axes reported separately and never summed.
+
 **Outstanding**
-- Nine remaining pages, pending format sign-off on the two exemplars (`HANDOVER.md` §13, step 2).
-- `templates/` — three files.
-- `site/index.html` — including the Process Filter.
+- `REPO_URL` in `build-site.py` is a placeholder until the repo has a GitHub home.
+- Brand and design tokens (`HANDOVER.md` §12.1) — site is on a neutral default.
