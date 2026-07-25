@@ -53,8 +53,11 @@ def rewrite_href(href):
         return "#" + frag[1] if len(frag) > 1 else "#top"
     if href.startswith("site/index.html"):
         return "#process-filter"
+    # Repo files that live outside site/. Pages serves site/ as its root, so a
+    # relative "../" escapes the deployment and 404s. Absolute repo URLs work
+    # from the published site and from a double-clicked local copy alike.
     if href.startswith("templates/") or href == "LICENSE":
-        return "../" + href
+        return REPO_URL + "/blob/main/" + href
     href = re.sub(r"^docs/", "", href)
     m = re.match(r"^(?:tools/|practices/)?([a-z0-9-]+)\.md(#.*)?$", href)
     if m:
@@ -497,7 +500,8 @@ PF_HTML = """
   <div class="pf-actions">
     <button type="button" class="btn" id="pf-copy">Copy summary</button>
     <button type="button" class="btn" id="pf-reset">Reset</button>
-    <a class="btn" href="../templates/process-brief.md" style="text-decoration:none">Paper version</a>
+    <a class="btn" href="__REPO__/blob/main/templates/process-brief.md"
+       target="_blank" rel="noopener" style="text-decoration:none">Paper version</a>
   </div>
 </section>
 """
@@ -767,7 +771,7 @@ def build():
                 'No prerequisites, no reading order.</p>')
     body.append("</div>")
 
-    body.append(PF_HTML)
+    body.append(PF_HTML.replace("__REPO__", html.escape(REPO_URL)))
 
     body.append('<section id="who-its-for"><div class="section-head">'
                 '<h2>Who this is for</h2></div>')
