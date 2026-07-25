@@ -28,8 +28,9 @@ What changed, when, and why. Review entries are logged even when nothing changed
 - `site/index.html` — single file, no build step, scroll-spy sidebar, verb tags, Process Filter placed above the reading material.
 - `build-site.py` — generates the site from `README.md` and `docs/`.
 
-**Deviation from `HANDOVER.md` §5**
+**Deviations from `HANDOVER.md` §5**
 - `build-site.py` sits at the repo root, which the §5 structure doesn't list. Justified by §4: the site "must be generated from or deliberately synced with the docs," and two hand-maintained copies diverge. The reader still gets no build step — `site/index.html` is committed and opens by double-clicking. `docs/` is stated as canonical in the README and in the site footer.
+- `.github/workflows/pages.yml` deploys `site/` to GitHub Pages. Serving from the branch root instead would put the reference at `/applied-ai-operations/site/`; §7 calls the Process Filter "the single most linkable thing in the repo," and a clean URL is worth one file. The workflow uploads a folder — it compiles nothing, and forks inherit it working.
 
 **Verified at time of writing**
 - All seven outbound links return 200.
