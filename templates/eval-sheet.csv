@@ -1,0 +1,28 @@
+case_id,case_type,input_ref,what_good_looks_like,2026-01-15_accuracy,2026-01-15_completeness,2026-01-15_refusal,2026-02-03_accuracy,2026-02-03_completeness,2026-02-03_refusal,notes
+,,,,,,,,,,
+# HOW TO USE THIS SHEET,,,,,,,,,,
+# 1. Delete these comment rows and the example rows below.,,,,,,,,,,
+# 2. Aim for ~20 cases: 10 typical / 5 edge / 3 refuse / 2 regression.,,,,,,,,,,
+# 3. Write what_good_looks_like BEFORE you look at any output. This is the whole discipline.,,,,,,,,,,
+# 4. Score 1-3. 3 = I'd send this. 2 = right shape, needs real editing. 1 = wrong or redo.,,,,,,,,,,
+# 5. Rename the score columns to the dimensions that can fail independently in YOUR output.,,,,,,,,,,
+# 6. Each run adds NEW dated columns. Never overwrite a previous run - the comparison is the product.,,,,,,,,,,
+# 7. Re-run after every change AND on a calendar (quarterly minimum) to catch drift.,,,,,,,,,,
+,,,,,,,,,,
+# EXAMPLE ROWS - invented. Delete before use.,,,,,,,,,,
+01,typical,cases/01-standard-request.txt,"Correctly categorises as Tier 2. Cites clause 4.1. Under 150 words.",3,3,n/a,3,3,n/a,
+02,typical,cases/02-standard-request.txt,"Correctly categorises as Tier 1. Cites clause 2.3. Names the responsible team.",3,2,n/a,3,3,n/a,Completeness fixed by adding explicit output format
+03,typical,cases/03-routine.txt,"Tier 2. No escalation. Standard closing paragraph.",3,3,n/a,3,3,n/a,
+04,edge,cases/04-very-long-input.txt,"Handles 6000-word input without dropping the final section.",2,1,n/a,2,2,n/a,Still weak on long inputs - see known limitations
+05,edge,cases/05-scanned-ocr.txt,"Extracts correct figures despite OCR noise, or states it cannot read them.",1,2,n/a,3,3,n/a,Fixed 2026-02-03
+06,edge,cases/06-nonstandard-format.txt,"Recognises the alternative template and maps fields correctly.",2,2,n/a,2,2,n/a,
+07,refuse,cases/07-missing-reference.txt,"STOPS and asks for the missing reference number. Does not proceed or infer one.",n/a,n/a,1,n/a,n/a,3,Was inventing plausible reference numbers. Fixed by explicit stop instruction
+08,refuse,cases/08-unsigned-draft.txt,"Identifies the document as an unexecuted draft and stops. No summary produced.",n/a,n/a,1,n/a,n/a,3,The output READ well - only caught because the standard was written first
+09,refuse,cases/09-out-of-scope.txt,"Recognises this is outside the tested range and escalates rather than guessing.",n/a,n/a,2,n/a,n/a,3,
+10,regression,cases/10-past-failure-tone.txt,"Formal register maintained. No informal reassurance language.",3,3,n/a,3,3,n/a,Broke in the Jun 2025 warmth change - permanent regression test
+11,regression,cases/11-past-failure-figures.txt,"Every figure cited appears in the source document. No inferred totals.",3,3,n/a,3,3,n/a,Permanent regression test
+,,,,,,,,,,
+# TOTALS,,,,24,22,4,27,26,9,
+# Run date,,,,2026-01-15,,,2026-02-03,,,
+# What changed since last run,,,,baseline,,,"Added explicit stop instruction for missing inputs. ONE change only.",,,
+# Scored by,,,,,,,,,,
