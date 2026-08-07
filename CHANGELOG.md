@@ -2,6 +2,14 @@
 
 What changed, when, and why. Review entries are logged even when nothing changed — "reviewed, no changes" is information.
 
+## 2026-08-07
+
+**Added**
+- `docs/tools/claude-code.md` — a "Local or cloud" subsection under *How to use it*. Two paragraphs: what a cloud session can and cannot see, and the consequence that committed configuration is the line between a personal tool and a transferable one. Deliberately does not restate CLI flags, permission-mode names, or per-surface feature tables — those are the fastest-moving details on the surface, so the page links out instead.
+- `README.md` — link to the published site at the top.
+
+**Source:** a private working note on Claude Code session types (German, 2026-08-07). Only the durable architectural point was taken; the rest was product detail with a short shelf life. Repo stays English per `HANDOVER.md` §10.
+
 ## 2026-07-25 — Initial scaffold
 
 **Added**

@@ -38,6 +38,12 @@ Claude Code takes the eval from "an afternoon" to "a command." That is the diffe
 
 **Then automate the eval.** Once your test cases are in a file, ask it to run each one and write the scores to a sheet. This is the highest-value thing on the page and it is why non-developers should care.
 
+### Local or cloud — which is really a question about what you committed
+
+Claude Code runs either on your own machine or on a fresh cloud machine that clones your repository. The local one sees your files, your network, and your personal configuration. The cloud one sees **only what is committed** — and that half is the part worth remembering, because it quietly decides whether what you built is yours or the organisation's. Configuration sitting in your personal Claude folder travels nowhere. Configuration committed to the repo travels: to a colleague, to a cloud session, to a run scheduled for next quarter. This is the [Project](project.md) argument wearing different clothes — the container is what makes a system transferable rather than personal — and it is why a `CLAUDE.md` and a committed `.claude/` directory belong in any repo you intend to hand over.
+
+The corollary is the one people learn late: **state belongs in the repo, not in the conversation.** A long session feels like a project record and isn't one — it's a tool you happen to still be holding, and its memory is lossy. End each sitting by having Claude write the current state to a file, and commit it. Then any future session — yours next week, a colleague's, or a scheduled one that re-runs your [eval sheet](eval-sheet.md) — picks the thread up in two sentences. Which surfaces exist and what each can do changes quickly, so check [the Claude Code documentation](https://code.claude.com/docs/en/claude-code-on-the-web) rather than anything written here. The local-versus-cloud split underneath it is stable.
+
 ## Worked example
 
 *(Invented. The Marbury Trust is not a real organisation.)*

@@ -4,6 +4,10 @@
 
 This is an opinionated reference for closing that gap: which tools to use, how to use them well, and what to deliberately ignore.
 
+### → **[Read it on the web](https://betterbecurious.github.io/applied-ai-operations/)**
+
+The whole reference on one page, with the [Process Filter](https://betterbecurious.github.io/applied-ai-operations/#process-filter) ready to use.
+
 `Last reviewed: 2026-07-25`
 
 ---
